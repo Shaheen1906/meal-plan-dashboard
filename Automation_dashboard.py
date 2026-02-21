@@ -1,12 +1,11 @@
 import streamlit as st
 import requests
 import pandas as pd
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
 
-API_BASE = os.getenv("MEAL_DASHBOARD_URL","https://friskaaiccm-api-uat.nouriq.ai")
+
+
+API_BASE = "https://friskaaiccm-api-uat.nouriq.ai"
 
 st.set_page_config(layout="wide")
 st.title("🚀 Meal Plan Automation Dashboard")
@@ -190,4 +189,5 @@ if selected_run_id:
             st.info("No failed users available for retry.")
 
     else:
+
         st.info("No user logs found for this run.")
